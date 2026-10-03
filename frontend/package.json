@@ -1,0 +1,32 @@
+{
+  "name": "auto-apollo-lemlist-tracker",
+  "version": "1.0.0",
+  "description": "Production-grade, zero-dependency B2B tracking and identity stitching SDK",
+  "main": "dist/tracker.cjs.js",
+  "module": "dist/tracker.esm.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build:dev": "rollup -c --environment APP_ENV:development",
+    "build:test": "rollup -c --environment APP_ENV:test",
+    "build:prod": "rollup -c --environment APP_ENV:production",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "b2b-tracker",
+    "lead-scoring",
+    "identity-stitching",
+    "intent-data"
+  ],
+  "author": "Engineering",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.0",
+    "@rollup/plugin-node-resolve": "^15.2.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "dotenv": "^16.4.5",
+    "rollup": "^4.20.0",
+    "tslib": "^2.6.3",
+    "typescript": "^5.4.5"
+  }
+}
