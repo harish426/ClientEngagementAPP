@@ -8,7 +8,9 @@ export type EventType =
   | 'pageview'
   | 'heartbeat'
   | 'click'
+  | 'form_click'
   | 'form_submit'
+  | 'connection_accepted'
   | 'high_intent_view'
   | 'custom';
 

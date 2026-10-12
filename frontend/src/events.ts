@@ -117,6 +117,32 @@ export class EventObserver {
   }
 
   private observeForms(): void {
+    // 1. Observe form clicks / input focus
+    document.addEventListener(
+      'focusin',
+      (e) => {
+        const target = e.target as HTMLElement;
+        const form = target ? target.closest('form') : null;
+        if (!form || !target) return;
+
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) {
+          const fieldName = (target as HTMLInputElement).name || (target as HTMLInputElement).id || target.tagName.toLowerCase();
+          const fieldType = (target as HTMLInputElement).type || target.tagName.toLowerCase();
+          
+          const payload = this.createBasePayload('form_click', {
+            formId: form.id || 'unnamed_form',
+            fieldName,
+            fieldType,
+            interaction: 'field_focus',
+          });
+
+          this.transport.send(payload, false);
+        }
+      },
+      true
+    );
+
+    // 2. Observe form submits
     document.addEventListener(
       'submit',
       (e) => {

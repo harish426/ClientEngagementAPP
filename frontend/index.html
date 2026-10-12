@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusEngage | B2B Client Engagement & Intent Scoring</title>
+  <meta name="description" content="Intelligent Apollo.io lead prospecting, multichannel outreach, and real-time behavioral intent scoring platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body class="dark-theme">
+  <!-- App Container -->
+  <div id="app" class="app-layout">
+    
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+      <div class="brand-container">
+        <div class="brand-logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="brand-icon">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Nexus<span class="gradient-text">Engage</span></span>
+          <span class="brand-badge">B2B Intent AI</span>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs">
+        <button id="tab-btn-engage" class="nav-tab active" data-tab="engage">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>People Need to Engage</span>
+          <span id="badge-prospects" class="tab-count">12</span>
+        </button>
+
+        <button id="tab-btn-scoring" class="nav-tab" data-tab="scoring">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+          <span>Engaging People & Scores</span>
+          <span id="badge-hot-leads" class="tab-count pulse-badge">4 HOT</span>
+        </button>
+
+        <button id="tab-btn-about" class="nav-tab" data-tab="about">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>About Us</span>
+        </button>
+
+        <button id="tab-btn-contact" class="nav-tab" data-tab="contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Contact Us</span>
+        </button>
+      </nav>
+
+      <!-- System Status & Env Tag -->
+      <div class="header-actions">
+        <div class="live-status-pill">
+          <span class="status-dot"></span>
+          <span class="status-label">Tracking Engine Live</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+      
+      <!-- ================= SECTION 1: PEOPLE NEED TO ENGAGE ================= -->
+      <section id="section-engage" class="tab-section active">
+        <div class="section-header-row">
+          <div>
+            <h1 class="section-title">Prospecting & Outreach Pipeline</h1>
+            <p class="section-subtitle">Query verified B2B decision makers from Apollo.io and queue them into automated Lemlist sequences.</p>
+          </div>
+          <div class="header-stat-group">
+            <div class="stat-card mini">
+              <span class="stat-label">Saved in Queue</span>
+              <span id="stat-saved-count" class="stat-value">12</span>
+            </div>
+            <div class="stat-card mini">
+              <span class="stat-label">Active Outbound</span>
+              <span class="stat-value text-accent">8</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apollo Query Builder Card -->
+        <div class="glass-card query-builder-card">
+          <div class="card-header-flex">
+            <div class="card-title-group">
+              <div class="icon-circle icon-apollo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7.003 7.003 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7.003 7.003 0 0 1 11 3.07V3a1 1 0 0 1 2 0v.07A7.003 7.003 0 0 1 18.93 9H19a1 1 0 0 1 0 2h-.07A7.003 7.003 0 0 1 13 16.93z"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="card-title">Apollo.io Lead Search & Sourcing</h2>
+                <span class="card-description">Set target ICP parameters to fetch verified emails & LinkedIn profiles</span>
+              </div>
+            </div>
+            <button id="btn-quick-fill-icp" class="btn btn-secondary btn-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+              Load SaaS Founders ICP
+            </button>
+          </div>
+
+          <form id="apollo-search-form" class="query-grid">
+            <div class="form-group">
+              <label for="filter-title">Job Titles / Seniority</label>
+              <input type="text" id="filter-title" class="form-control" placeholder="e.g. CEO, Founder, VP Sales, Head of Growth" value="Founder, CEO, VP Sales">
+            </div>
+
+            <div class="form-group">
+              <label for="filter-industry">Target Industry</label>
+              <input type="text" id="filter-industry" class="form-control" placeholder="e.g. SaaS, FinTech, E-commerce" value="B2B SaaS, Software">
+            </div>
+
+            <div class="form-group">
+              <label for="filter-headcount">Company Headcount</label>
+              <select id="filter-headcount" class="form-control">
+                <option value="11,50">11 - 50 Employees (High Growth)</option>
+                <option value="51,200" selected>51 - 200 Employees (Scale-up)</option>
+                <option value="201,500">201 - 500 Employees (Mid-Market)</option>
+                <option value="500+">500+ Employees (Enterprise)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="filter-geo">Geography / Country</label>
+              <input type="text" id="filter-geo" class="form-control" placeholder="e.g. United States, United Kingdom" value="United States, Canada">
+            </div>
+
+            <div class="form-group">
+              <label for="filter-verified">Verification Filter</label>
+              <div class="checkbox-pill">
+                <input type="checkbox" id="filter-verified" checked>
+                <label for="filter-verified">Verified Email Only</label>
+              </div>
+            </div>
+
+            <div class="form-group form-actions-cell">
+              <button type="submit" id="btn-query-apollo" class="btn btn-primary btn-glow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span>Fetch Leads via Apollo API</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Apollo Live Query Results Preview -->
+          <div id="apollo-results-container" class="query-results-area" style="display: none;">
+            <div class="results-header">
+              <div class="results-count-title">
+                <span>Fetched from Apollo:</span> <strong id="fetched-count">4</strong> verified prospects
+              </div>
+              <button id="btn-save-all-queried" class="btn btn-success btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline></svg>
+                <span>Save All to Engagement Queue</span>
+              </button>
+            </div>
+            <div id="apollo-leads-grid" class="cards-grid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Saved Prospects Ready for Outreach -->
+        <div class="glass-card table-card">
+          <div class="card-header-flex">
+            <div>
+              <h2 class="card-title">Saved Prospects Queue for Outreach</h2>
+              <span class="card-description">People queried and scheduled for Lemlist email & LinkedIn multichannel sequences</span>
+            </div>
+            <div class="table-actions">
+              <button id="btn-push-all-lemlist" class="btn btn-accent btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+                <span>Sync Ready Leads to Lemlist</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Prospect</th>
+                  <th>Company & Domain</th>
+                  <th>Title</th>
+                  <th>Channels</th>
+                  <th>Outreach Status</th>
+                  <th>Smart Link Tracking</th>
+                  <th class="text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="saved-leads-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: ENGAGING PEOPLE & SCORE ================= -->
+      <section id="section-scoring" class="tab-section">
+        <div class="section-header-row">
+          <div>
+            <h1 class="section-title">Real-Time Client Engagement & Intent Scoring</h1>
+            <p class="section-subtitle">Behavioral scoring dashboard with live task audit trail. Click any lead to see all completed actions.</p>
+          </div>
+          <div class="header-filters">
+            <select id="score-filter-tier" class="form-control select-sm">
+              <option value="all">All Engagement Tiers</option>
+              <option value="hot" selected>🔥 Hot Leads (Score ≥ 70)</option>
+              <option value="warm">⚡ Warm Leads (Score 30-69)</option>
+              <option value="cold">❄️ Cold Leads (Score &lt; 30)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Intent Summary Metrics -->
+        <div class="metrics-grid">
+          <div class="stat-card border-accent-glow">
+            <div class="stat-icon-wrap icon-flame">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+            </div>
+            <div>
+              <span class="stat-label">Hot Leads Ready for Sales</span>
+              <span class="stat-value text-flame">4</span>
+              <span class="stat-sub">Immediate conversation needed</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrap icon-activity">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <div>
+              <span class="stat-label">Active Buying Committees</span>
+              <span class="stat-value text-accent">3 Accounts</span>
+              <span class="stat-sub">Multiple stakeholders engaging</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrap icon-conversion">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div>
+              <span class="stat-label">High-Intent Form Starts</span>
+              <span class="stat-value text-success">6</span>
+              <span class="stat-sub">Demo & Pricing conversions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engaging Leads List with Expandable Task Audit -->
+        <div class="glass-card">
+          <div class="card-header-flex">
+            <div>
+              <h2 class="card-title">Live Scored Contacts & Behavior Timeline</h2>
+              <span class="card-description">Click any row to expand the dropdown and view the exact task history that generated their score</span>
+            </div>
+            <span class="badge badge-pulse">● Live Engine Syncing</span>
+          </div>
+
+          <div id="engaging-leads-container" class="accordion-lead-list">
+            <!-- Dynamically populated with expandable accordion rows -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 3: ABOUT US ================= -->
+      <section id="section-about" class="tab-section">
+        <div class="about-hero glass-card">
+          <span class="badge badge-accent">Platform Architecture</span>
+          <h1 class="about-title">Intelligent Client Engagement & B2B Lead Intent Engine</h1>
+          <p class="about-lead">
+            We bridge the gap between cold outbound prospecting and live buyer intent. By unifying **Apollo.io verified sourcing**, **Lemlist multichannel orchestration**, and **HubSpot-grade real-time behavioral scoring**, our platform tells you exactly who to speak with at the exact moment they are ready.
+          </p>
+        </div>
+
+        <div class="feature-trio-grid">
+          <div class="glass-card feature-box">
+            <div class="feature-icon icon-cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            </div>
+            <h3>Anonymous Reverse-IP Intent</h3>
+            <p>Identifies corporate domains visiting your high-value pricing and product pages even before they fill out any forms, filtering out residential ISPs.</p>
+          </div>
+
+          <div class="glass-card feature-box">
+            <div class="feature-icon icon-purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Identity Stitching & URLs</h3>
+            <p>Dynamically binds browser cookies to known Lemlist leads as soon as they click a personalized campaign link (`?email=...`), instantly linking past sessions.</p>
+          </div>
+
+          <div class="glass-card feature-box">
+            <div class="feature-icon icon-emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <h3>Buying Committee Multiplier</h3>
+            <p>Aggregates scores across all stakeholders under the same company domain, boosting account velocity when multiple leaders engage simultaneously.</p>
+          </div>
+        </div>
+
+        <div class="glass-card scoring-matrix-card">
+          <h2 class="card-title">The Scoring & Intent Point Matrix</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Event / Action Trigger</th>
+                  <th>Category</th>
+                  <th>Points Awarded</th>
+                  <th>Strategic Rationale & Timestamp Audit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Demo Request Form Submission</strong></td>
+                  <td><span class="badge badge-success">High Conversion</span></td>
+                  <td><strong class="text-success">+45 pts</strong></td>
+                  <td>Active conversion intent; logs exact submission timestamp & contact details.</td>
+                </tr>
+                <tr>
+                  <td><strong>Clicked & Interacted with Form Fields</strong></td>
+                  <td><span class="badge badge-form-click">Form Interaction</span></td>
+                  <td><strong class="text-form-click">+5 pts</strong></td>
+                  <td>Signals active intent to fill out lead forms; captures precise field focus timestamps.</td>
+                </tr>
+                <tr>
+                  <td><strong>Accepted LinkedIn Connection Request</strong></td>
+                  <td><span class="badge badge-linkedin">Network Acceptance</span></td>
+                  <td><strong class="text-linkedin">+10 pts</strong></td>
+                  <td>Prospect accepted connection invite; stores acceptance timestamp for immediate warm followup.</td>
+                </tr>
+                <tr>
+                  <td><strong>Replied to Lemlist Email or LinkedIn Message</strong></td>
+                  <td><span class="badge badge-purple">Direct Engagement</span></td>
+                  <td><strong class="text-purple">+40 pts</strong></td>
+                  <td>Direct dialogue initiated; automated sequence auto-pauses.</td>
+                </tr>
+                <tr>
+                  <td><strong>Visited /pricing or /quote for &gt; 60s</strong></td>
+                  <td><span class="badge badge-accent">High Intent</span></td>
+                  <td><strong class="text-accent">+25 pts</strong></td>
+                  <td>Evaluating pricing models indicates active consideration phase.</td>
+                </tr>
+                <tr>
+                  <td><strong>Clicked Smart Tracking Link from Campaign</strong></td>
+                  <td><span class="badge badge-cyan">Engagement</span></td>
+                  <td><strong class="text-cyan">+15 pts</strong></td>
+                  <td>Stitches visitor cookie and confirms message relevance.</td>
+                </tr>
+                <tr>
+                  <td><strong>Inactivity &gt; 14 Days</strong></td>
+                  <td><span class="badge badge-danger">Time Decay</span></td>
+                  <td><strong class="text-danger">-5% / week</strong></td>
+                  <td>Prevents stale leads from cluttering active sales pipeline.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 4: CONTACT US (Interactive Tracker Test) ================= -->
+      <section id="section-contact" class="tab-section">
+        <div class="contact-grid">
+          <div class="glass-card contact-info-panel">
+            <span class="badge badge-accent">Interactive Test Lab</span>
+            <h1 class="section-title">Schedule a Walkthrough & Test Real-Time Scoring</h1>
+            <p class="section-subtitle">
+              Filling out this form or clicking the high-intent triggers below will directly fire events into the embedded `tracker.js` SDK and immediately update your score in Tab 2!
+            </p>
+
+            <div class="info-blocks">
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <h4>Direct Sales Hotline</h4>
+                  <p>+1 (800) 555-0199</p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <h4>Inbound Team</h4>
+                  <p>growth@clientengagement.app</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick High Intent Triggers Simulator -->
+            <div class="simulator-box">
+              <span class="sim-title">⚡ Simulate Live Timestamped Actions:</span>
+              <div class="sim-buttons-grid">
+                <button id="sim-btn-accept-conn" class="btn btn-outline btn-sm btn-sim-linkedin">
+                  🤝 Accept LinkedIn Conn (+10 pts)
+                </button>
+                <button id="sim-btn-form-click" class="btn btn-outline btn-sm btn-sim-form">
+                  📝 Click / Focus Form (+5 pts)
+                </button>
+                <button id="sim-btn-pricing" class="btn btn-outline btn-sm">
+                  👁️ View /pricing (+25 pts)
+                </button>
+                <button id="sim-btn-reply" class="btn btn-outline btn-sm">
+                  ✉️ Email Reply (+40 pts)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact / Demo Form -->
+          <div class="glass-card contact-form-card">
+            <h2 class="card-title">Book a 1-on-1 Consultation</h2>
+            <p class="card-description">Experience how the tracking engine captures form submissions and updates lead intent.</p>
+
+            <form id="contact-demo-form" class="standard-form">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contact-name">Full Name *</label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="Sarah Jenkins" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Work Email *</label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="sarah@acmecorp.com" required>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contact-company">Company Name</label>
+                  <input type="text" id="contact-company" class="form-control" placeholder="Acme Corp">
+                </div>
+                <div class="form-group">
+                  <label for="contact-team-size">Monthly Outbound Volume</label>
+                  <select id="contact-team-size" class="form-control">
+                    <option value="500-2000">500 - 2,000 emails/mo</option>
+                    <option value="2000-10000" selected>2,000 - 10,000 emails/mo</option>
+                    <option value="10000+">10,000+ emails/mo (Enterprise)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-notes">Project Requirements / Notes</label>
+                <textarea id="contact-notes" rows="3" class="form-control" placeholder="We are looking to scale our B2B outbound with Apollo & Lemlist..."></textarea>
+              </div>
+
+              <button type="submit" id="btn-submit-contact" class="btn btn-primary btn-block btn-glow">
+                <span>Submit & Trigger Live Lead Score (+45 pts)</span>
+              </button>
+            </form>
+
+            <div id="contact-success-alert" class="alert alert-success" style="display: none; margin-top: 1rem;">
+              <strong>🎉 Score Updated!</strong> Lead identity stitched to <code>tracker.js</code>. Check Tab 2 to view your updated score and audit tasks!
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Load Application TypeScript Entrypoint -->
+  <script type="module" src="./src/app.ts"></script>
+</body>
+</html>
